@@ -20,17 +20,17 @@ class TimerTableCell : UITableViewCell {
     var timer: Timer?
     var destDate: NSDate = NSDate()
     var parent: TimerTableViewController?
-    var finished = false
+
     
     func countUp() {
         let now = NSDate(timeIntervalSinceNow: 0)
         let diff: NSTimeInterval = destDate.timeIntervalSince1970 - now.timeIntervalSince1970
-        if diff < 0 && !finished {
-            finished = true
+        if diff < 0 {
+
             notifyUser()
             showRemoval()
             
-        } else if !finished {
+        } else  {
 
             let division = diff.divideTime()
             var formattedString = ""
@@ -67,7 +67,9 @@ class TimerTableCell : UITableViewCell {
             not.alertBody = "\(🕐.title) – Your time is up!"
             UIApplication.sharedApplication().presentLocalNotificationNow(not)
             NSNotificationCenter.defaultCenter().postNotificationName("timerExpired", object: nil, userInfo: ["timer": 🕐])
-            🕐.title = "\(🕐.title) – Complete"
+            
+
+            title.text = "\(🕐.title) – Complete"
         }
     }
     
@@ -82,7 +84,7 @@ class TimerTableCell : UITableViewCell {
                 👪.removeTimer(timer: 🕐)
             }
         }
-        finished = false
+
         removeButton.hidden = true
         time.hidden = false
         
