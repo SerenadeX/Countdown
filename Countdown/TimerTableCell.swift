@@ -36,7 +36,7 @@ class TimerTableCell : UITableViewCell {
             var formattedString = ""
 
             func addTimeString(value: Int, units: String, addSpace: Bool = true, leadingZeros: Bool = false) {
-                if formattedString != "" && addSpace{
+                if formattedString != "" && addSpace && value > 0{
                     formattedString += " "
                 }
                 
@@ -56,7 +56,6 @@ class TimerTableCell : UITableViewCell {
             addTimeString(division.minutes, units: ":", addSpace: false, leadingZeros: division.minutes < 10)
             addTimeString(division.seconds, units: "", addSpace: false, leadingZeros: division.seconds < 10)
             time.text = formattedString
-//            time.text = "\(division.weeks) w \(division.days) d \(division.hours):\(division.minutes):\(division.seconds)"
         }
     }
     
@@ -94,6 +93,7 @@ class TimerTableCell : UITableViewCell {
 
         destDate = 🕐.date
         self.timer = 🕐
+        countUp()
         let runLoop = NSRunLoop.currentRunLoop()
         let timer = NSTimer(timeInterval: 1, target: self, selector: "countUp", userInfo: nil, repeats: true)
         
