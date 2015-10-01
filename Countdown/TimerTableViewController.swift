@@ -37,20 +37,25 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 timers.append(🕐)
             }
         }
-        
-        let d = NSUserDefaults.standardUserDefaults()
-        let data = NSKeyedArchiver.archivedDataWithRootObject(timers)
-        d.setValue(data, forKey: "timers")
+        updateDefaults()
         tableView.reloadData()
 
     }
 
+    func updateDefaults() {
+        let d = NSUserDefaults.standardUserDefaults()
+        let data = NSKeyedArchiver.archivedDataWithRootObject(timers)
+        d.setValue(data, forKey: "timers")
+        
+    }
+    
     func removeTimer(timer 🕐: Timer) {
         if let index = timers.indexOf(🕐) {
             timers.removeAtIndex(index)
+
+            tableView.deleteRowsAtIndexPaths([NSIndexPath(forItem: index, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            updateDefaults()
         }
-        
-        updateTimers(notification: nil)
     }
     
     override func didReceiveMemoryWarning() {

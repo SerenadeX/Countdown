@@ -33,7 +33,30 @@ class TimerTableCell : UITableViewCell {
         } else if !finished {
 
             let division = diff.divideTime()
-            time.text = "\(division.weeks) w \(division.days) d \(division.hours):\(division.minutes):\(division.seconds)"
+            var formattedString = ""
+
+            func addTimeString(value: Int, units: String, addSpace: Bool = true, leadingZeros: Bool = false) {
+                if formattedString != "" && addSpace{
+                    formattedString += " "
+                }
+                
+                if leadingZeros {
+                    formattedString += "0"
+                }
+                
+                
+                if value > 0  || leadingZeros {
+                    formattedString += "\(value)\(units)"
+                }
+            }
+            
+            addTimeString(division.weeks, units: "w")
+            addTimeString(division.days, units: "d")
+            addTimeString(division.hours, units: ":", addSpace: true, leadingZeros: division.hours < 10)
+            addTimeString(division.minutes, units: ":", addSpace: false, leadingZeros: division.minutes < 10)
+            addTimeString(division.seconds, units: "", addSpace: false, leadingZeros: division.seconds < 10)
+            time.text = formattedString
+//            time.text = "\(division.weeks) w \(division.days) d \(division.hours):\(division.minutes):\(division.seconds)"
         }
     }
     
