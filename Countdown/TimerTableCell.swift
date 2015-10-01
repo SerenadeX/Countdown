@@ -41,7 +41,7 @@ class TimerTableCell : UITableViewCell {
         if let 🕐 = timer {
             let not = UILocalNotification()
             not.alertTitle = 🕐.title
-            not.alertBody = "\(not.alertTitle) – Your time is up!"
+            not.alertBody = "\(🕐.title) – Your time is up!"
             UIApplication.sharedApplication().presentLocalNotificationNow(not)
             NSNotificationCenter.defaultCenter().postNotificationName("timerExpired", object: nil, userInfo: ["timer": 🕐])
             🕐.title = "\(🕐.title) – Complete"
@@ -66,6 +66,7 @@ class TimerTableCell : UITableViewCell {
     }
     
     func startTimer(🕐: Timer = Timer(title: "default", date: NSDate(timeIntervalSinceNow: NSTimeInterval(days: 7)))) {
+
         destDate = 🕐.date
         self.timer = 🕐
         let runLoop = NSRunLoop.currentRunLoop()
@@ -74,7 +75,6 @@ class TimerTableCell : UITableViewCell {
         runLoop.addTimer(timer, forMode: NSDefaultRunLoopMode)
         
     }
-    
     
     
     

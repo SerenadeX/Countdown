@@ -75,7 +75,20 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return timers.count
     }
     
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+            let 🚛 = UITableViewRowAction(style: .Default, title: "Delete") { (action, index) -> Void in
+                self.removeTimer(timer: self.timers[index.item])
+            }
+            
+            🚛.backgroundColor = UIColor.redColor()
+            
+            return [🚛]
+    }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle:UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+    }
     
 }
 
