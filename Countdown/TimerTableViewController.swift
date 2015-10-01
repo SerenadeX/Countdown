@@ -76,7 +76,7 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-            let 🚛 = UITableViewRowAction(style: .Default, title: "Delete") { (action, index) -> Void in
+            let 🚛 = UITableViewRowAction(style: .Default, title: "Remove") { (action, index) -> Void in
                 self.removeTimer(timer: self.timers[index.item])
             }
             
@@ -84,11 +84,29 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
             return [🚛]
     }
+
+    func showTooManyTimersAlert() {
+        let alert = UIAlertController(title: "Too many alerts", message: "You can't have more than 100 alerts", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle:UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    @IBAction func openAddTimerView(sender: AnyObject) {
+        if timers.count >= 100 {
+            showTooManyTimersAlert()
+        } else {
+            performSegueWithIdentifier("openAddTimerView", sender: self)
+        }
         
         
     }
+    
+//    func tableView(tableView: UITableView, commitEditingStyle editingStyle:UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        
+//    }
     
 }
 

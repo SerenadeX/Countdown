@@ -92,7 +92,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LjC-Ic-vTD" id="WWj-Sm-0B5">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="83.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-3K-WIh">
@@ -159,12 +159,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="1QE-kk-geW">
                             <connections>
-                                <segue destination="CZX-yi-cvF" kind="presentation" modalTransitionStyle="coverVertical" id="LLG-3q-d5b"/>
+                                <action selector="openAddTimerView:" destination="BYZ-38-t0r" id="YnE-h5-18V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="BpD-ji-eB0" id="TA2-2a-LTd"/>
+                        <segue destination="CZX-yi-cvF" kind="presentation" identifier="openAddTimerView" modalTransitionStyle="coverVertical" id="VH0-ao-JUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
