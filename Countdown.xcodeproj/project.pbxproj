@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592D1BFE1BB985A900D63472 /* NSTimeIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D1BFD1BB985A900D63472 /* NSTimeIntervalExt.swift */; settings = {ASSET_TAGS = (); }; };
+		592D1C001BB985FC00D63472 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D1BFF1BB985FC00D63472 /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
+		592D1C021BB989CE00D63472 /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D1C011BB989CE00D63472 /* AddTimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		592D1C041BB989DA00D63472 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D1C031BB989DA00D63472 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		59E0565A1BB5CDA700FC7CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E056591BB5CDA700FC7CD0 /* AppDelegate.swift */; };
-		59E0565C1BB5CDA700FC7CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0565B1BB5CDA700FC7CD0 /* ViewController.swift */; };
+		59E0565C1BB5CDA700FC7CD0 /* TimerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E0565B1BB5CDA700FC7CD0 /* TimerTableViewController.swift */; };
 		59E0565F1BB5CDA700FC7CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E0565D1BB5CDA700FC7CD0 /* Main.storyboard */; };
 		59E056611BB5CDA700FC7CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E056601BB5CDA700FC7CD0 /* Assets.xcassets */; };
 		59E056641BB5CDA700FC7CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E056621BB5CDA700FC7CD0 /* LaunchScreen.storyboard */; };
+		59E0566D1BB5CDDC00FC7CD0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E0566C1BB5CDDC00FC7CD0 /* StoreKit.framework */; };
+		59E056711BB5D46F00FC7CD0 /* TimerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E056701BB5D46F00FC7CD0 /* TimerTableCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592D1BFD1BB985A900D63472 /* NSTimeIntervalExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExt.swift; sourceTree = "<group>"; };
+		592D1BFF1BB985FC00D63472 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		592D1C011BB989CE00D63472 /* AddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
+		592D1C031BB989DA00D63472 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		59E056561BB5CDA700FC7CD0 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E056591BB5CDA700FC7CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59E0565B1BB5CDA700FC7CD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59E0565B1BB5CDA700FC7CD0 /* TimerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewController.swift; sourceTree = "<group>"; };
 		59E0565E1BB5CDA700FC7CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59E056601BB5CDA700FC7CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59E056631BB5CDA700FC7CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59E056651BB5CDA700FC7CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59E0566B1BB5CDC800FC7CD0 /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Countdown.entitlements; sourceTree = "<group>"; };
+		59E0566C1BB5CDDC00FC7CD0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		59E056701BB5D46F00FC7CD0 /* TimerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTableCell.swift; sourceTree = "<group>"; };
+		59E056721BB5DFF700FC7CD0 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,15 +43,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E0566D1BB5CDDC00FC7CD0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592D1C051BB989E900D63472 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				59E0565D1BB5CDA700FC7CD0 /* Main.storyboard */,
+				59E0565B1BB5CDA700FC7CD0 /* TimerTableViewController.swift */,
+				59E056701BB5D46F00FC7CD0 /* TimerTableCell.swift */,
+				592D1C011BB989CE00D63472 /* AddTimerViewController.swift */,
+				592D1C031BB989DA00D63472 /* SettingsViewController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		592D1C061BB989F100D63472 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				59E056591BB5CDA700FC7CD0 /* AppDelegate.swift */,
+				592D1BFD1BB985A900D63472 /* NSTimeIntervalExt.swift */,
+				592D1BFF1BB985FC00D63472 /* Timer.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		59E0564D1BB5CDA700FC7CD0 = {
 			isa = PBXGroup;
 			children = (
+				59E056721BB5DFF700FC7CD0 /* MyPlayground.playground */,
+				59E0566C1BB5CDDC00FC7CD0 /* StoreKit.framework */,
 				59E056581BB5CDA700FC7CD0 /* Countdown */,
 				59E056571BB5CDA700FC7CD0 /* Products */,
 			);
@@ -54,9 +93,9 @@
 		59E056581BB5CDA700FC7CD0 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
-				59E056591BB5CDA700FC7CD0 /* AppDelegate.swift */,
-				59E0565B1BB5CDA700FC7CD0 /* ViewController.swift */,
-				59E0565D1BB5CDA700FC7CD0 /* Main.storyboard */,
+				59E0566B1BB5CDC800FC7CD0 /* Countdown.entitlements */,
+				592D1C061BB989F100D63472 /* Util */,
+				592D1C051BB989E900D63472 /* UI */,
 				59E056601BB5CDA700FC7CD0 /* Assets.xcassets */,
 				59E056621BB5CDA700FC7CD0 /* LaunchScreen.storyboard */,
 				59E056651BB5CDA700FC7CD0 /* Info.plist */,
@@ -95,6 +134,18 @@
 				TargetAttributes = {
 					59E056551BB5CDA700FC7CD0 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9P849B5QJR;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,7 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59E0565C1BB5CDA700FC7CD0 /* ViewController.swift in Sources */,
+				592D1BFE1BB985A900D63472 /* NSTimeIntervalExt.swift in Sources */,
+				59E0565C1BB5CDA700FC7CD0 /* TimerTableViewController.swift in Sources */,
+				592D1C041BB989DA00D63472 /* SettingsViewController.swift in Sources */,
+				592D1C021BB989CE00D63472 /* AddTimerViewController.swift in Sources */,
+				59E056711BB5D46F00FC7CD0 /* TimerTableCell.swift in Sources */,
+				592D1C001BB985FC00D63472 /* Timer.swift in Sources */,
 				59E0565A1BB5CDA700FC7CD0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,10 +302,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyokotech.Countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -257,10 +318,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Countdown/Countdown.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyokotech.Countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -283,6 +349,7 @@
 				59E0566A1BB5CDA700FC7CD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

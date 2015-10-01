@@ -16,7 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        setupPushNotifications()
         return true
+    }
+    
+    func setupPushNotifications() {
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+//        print(UIApplication.sharedApplication().currentUserNotificationSettings())
+        let n = UILocalNotification()
+        n.fireDate = NSDate(timeIntervalSinceNow: 20)
+        n.alertBody = "This is a test notification"
+        n.alertTitle = "Test"
+        UIApplication.sharedApplication().scheduleLocalNotification(n)
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
