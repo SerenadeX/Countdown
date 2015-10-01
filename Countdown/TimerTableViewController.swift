@@ -31,24 +31,26 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    func updateTimers(notification 📁: NSNotification) {
-        if let info = 📁.userInfo {
+    func updateTimers(notification 📁: NSNotification?) {
+        if let info = 📁?.userInfo {
             if let 🕐 = info["timer"] as? Timer{
                 timers.append(🕐)
-                
             }
-            
-            
         }
-        
-        
         
         let d = NSUserDefaults.standardUserDefaults()
         let data = NSKeyedArchiver.archivedDataWithRootObject(timers)
         d.setValue(data, forKey: "timers")
-        print(timers)
         tableView.reloadData()
+
+    }
+
+    func removeTimer(timer 🕐: Timer) {
+        if let index = timers.indexOf(🕐) {
+            timers.removeAtIndex(index)
+        }
         
+        updateTimers(notification: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +63,7 @@ class TimerTableViewController: UIViewController, UITableViewDelegate, UITableVi
         if let c = cell {
             let 🕐 = timers[indexPath.item]
             c.startTimer(🕐)
+            c.parent = self
             
             c.title.text = 🕐.title
             return c
