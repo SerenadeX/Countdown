@@ -15,23 +15,27 @@ class TimerTableCell : UITableViewCell {
     
     @IBOutlet weak var removeButton: UIButton!
     
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var title: UILabel!
     var timer: Timer?
     var destDate: NSDate = NSDate()
     var parent: TimerTableViewController?
 
+
+    
+    @IBAction func changeFavoriteState(sender: AnyObject) {
+        favoriteButton.tintColor = UIColor.yellowColor()
+
+    }
     
     func countUp() {
         let now = NSDate(timeIntervalSinceNow: 0)
         let diff: NSTimeInterval = destDate.timeIntervalSince1970 - now.timeIntervalSince1970
         if diff < 0 {
-
             notifyUser()
             showRemoval()
-            
         } else  {
-
             let division = diff.divideTime()
             var formattedString = ""
 
@@ -83,10 +87,6 @@ class TimerTableCell : UITableViewCell {
                 👪.removeTimer(timer: 🕐)
             }
         }
-
-        removeButton.hidden = true
-        time.hidden = false
-        
     }
     
     func startTimer(🕐: Timer = Timer(title: "default", date: NSDate(timeIntervalSinceNow: NSTimeInterval(days: 7)))) {
@@ -96,9 +96,7 @@ class TimerTableCell : UITableViewCell {
         countUp()
         let runLoop = NSRunLoop.currentRunLoop()
         let timer = NSTimer(timeInterval: 1, target: self, selector: "countUp", userInfo: nil, repeats: true)
-        
         runLoop.addTimer(timer, forMode: NSDefaultRunLoopMode)
-        
     }
     
     
